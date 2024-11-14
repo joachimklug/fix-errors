@@ -1,6 +1,6 @@
 {
   "name": "fix-errors",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "version:patch": "npm version patch -m \"Release version %s\" && git push origin --tags",
