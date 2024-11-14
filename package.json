@@ -6,7 +6,6 @@
     "version:patch": "npm version patch -m \"Release version %s\" && git push origin --tags",
     "version:minor": "npm version minor -m \"Release version %s\" && git push origin --tags",
     "version:major": "npm version major -m \"Release version %s\" && git push origin --tags",
-    "publish": "npm run version:patch && npm publish",
     "local": "npm link && fix-errors"
   },
   "bin": {
