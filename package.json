@@ -10,7 +10,7 @@
     "local": "npm link && fix-errors"
   },
   "bin": {
-    "fix-errors": "./index.js"
+    "fix-errors": "index.js"
   },
   "keywords": [],
   "type": "module",
