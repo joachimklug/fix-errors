@@ -1,52 +1,97 @@
-# fix-errors
+# Fix Errors
 
-`fix-errors` is a fun, lighthearted CLI tool to "fix" all your (fictional) errors with a bit of humor. Play around with different flags and try to reduce errors to zero!
+**Fix Errors** is a fun and playful CLI tool that simulates finding and fixing errors in your system. It’s designed to add a bit of humor to your command line experience, featuring quirky loading messages and customizable flags for more control. This project is open-source and encourages contributions to add more functionality, messages, and error-fixing logic.
+
+---
+
+## Background
+
+In real software development, finding and fixing errors can be tedious. **Fix Errors** lightens the mood by pretending to "fix" random, fictional errors with humorous messages. It’s intended purely for entertainment — no actual system files or applications are modified by running this tool. (Except one file in /tmp to store the current error count)
 
 ## Installation
 
-You can run this package directly with `npx`:
-
+To use `fix-errors` directly without needing to install it globally, run:
 ```bash
 npx fix-errors
 ```
 
+Or, if you want to install it globally:
+```bash
+npm install -g fix-errors
+```
+
 ## Usage
 
-Run `fix-errors` to start the fun! You’ll see animations and messages indicating the progress of "fixing" errors. Your goal is to reach zero errors by using various flags and experimenting with different approaches.
+Once installed, you can run `fix-errors` with various flags for different behaviors. This tool includes a playful loading animation and humorous messages that rotate every few seconds.
 
-## Flags
+Basic usage: `bash fix-errors`
 
-- `--all`: Attempt to fix all errors in one go.
-- `--verbose`: Show more detailed information during the fixing process.
-- `--silent`: Suppress most output.
-- `--unfixable`: Try to fix “unfixable” errors for an extra challenge.
-- `--hint`: Get a playful hint on how to reduce errors.
+## Options
 
-_(More flags may be added as the project evolves!)_
+| Option          | Alias    | Description                                                                 |
+|-----------------|----------|-----------------------------------------------------------------------------|
+| `--help`        | `-h`     | Show help information about the tool and its options                        |
+| `--force`       | `-f`     | Force fixes all errors, setting both major and minor error counts to zero   |
+| `--scan`        | `-s`     | Scans for additional errors, adding new ones to the error count             |
 
-## Game Mechanics
+### Examples
 
-Errors are categorized by types like **fixable**, **unfixable**, **critical**, **major**, **minor**, and others. Each type responds differently to the flags, adding a puzzle element to reaching zero errors. The error count persists across sessions, so you can track your progress over time. Errors reset periodically, adding a fresh challenge each day!
+- **Force fixing all errors**:
+  ```bash
+  fix-errors --force
+  ```
+  Attempts to set both major and minor errors to zero.
 
-## Contributing
+- **Scan for more errors**:
+  ```bash
+  fix-errors --scan
+  ```
+  Finds additional errors and adds them to the current count, simulating a "scan" process.
 
-Contributions are welcome! This project is open-source and intended to be a fun, community-driven experience. Feel free to submit pull requests to add more flags, animations, or other playful features.
+- **Display help information**:
+  ```bash
+  fix-errors -h
+  ```
 
-### How to Contribute
+## Features
 
-1. Fork the repository and clone it to your local machine.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes and test thoroughly.
-4. Submit a pull request with a clear description of your changes.
+- **Random Error Counts**: On each run, the tool generates a random count of "errors" across different types (e.g., minor, major).
+- **Persistent Error Tracking**: Keeps track of errors between sessions using a JSON file stored in your system’s temp directory.
+- **Daily Reset**: Error counts reset every 24 hours, simulating the idea that "new errors" appear every day.
+- **Humorous Loading Messages**: The tool shows random, humorous loading messages to make the experience more enjoyable.
 
-## Roadmap
+## Contribution Guidelines
 
-In future updates, we plan to:
+We welcome contributions to make this tool even more fun! Here are a few ideas:
+- **Add New Flags**: Implement new flags to change behavior, e.g., a `--verbose` flag for more detailed messages.
+- **Expand Error Types**: Add new categories or types of errors for more variety.
+- **More Loading Messages**: Add more funny messages to keep the loading animation entertaining.
+- **Refine Existing Features**: Improve current features or optimize performance.
 
-- Add more types of errors for variety and challenge.
-- Introduce special "easter eggs" or success messages for reaching zero errors.
-- Improve the gamification elements and expand the flag options.
+### Steps to Contribute
+
+1. **Fork the Repository**: Click the "Fork" button at the top right of this repository.
+2. **Clone the Repository**: Clone your forked repository to your local machine.
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/fix-errors.git
+   ```
+3. **Create a New Branch**: Create a branch for your feature or bug fix.
+   ```bash
+   git checkout -b my-new-feature
+   ```
+4. **Make Your Changes**: Add and commit your changes.
+5. **Push to Your Branch**: Push your branch to GitHub.
+   ```bash
+   git push origin my-new-feature
+   ```
+6. **Submit a Pull Request**: Open a pull request from your branch into the main repository.
 
 ## License
 
-- GPLv3
+This project is licensed under the GPLv3 License.
+
+---
+
+## Disclaimer
+
+This tool is intended for entertainment purposes only.
